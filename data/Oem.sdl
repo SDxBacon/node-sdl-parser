@@ -1,0 +1,73 @@
+TOKEN
+	Name  = "PHASE_CODE"
+	Value = "A"
+	TokenType = Expression
+	TargetMAK = Yes
+	TargetH = Yes
+	TargetEQU = Yes
+End
+
+TOKEN
+	Name  = "PROJECT_MAJOR_VERSION"
+	Value  = "0"
+	TokenType = Integer
+	TargetMAK = Yes
+	TargetH = Yes
+	TargetEQU = Yes
+End
+
+TOKEN
+	Name  = "PROJECT_MINOR_VERSION"
+	Value  = "01"
+	TokenType = Integer
+	TargetMAK = Yes
+	TargetH = Yes
+	TargetEQU = Yes
+End
+
+TOKEN
+	Name  = "PROJECT_REVISION"
+	Value = "A"
+	Help  = "1 character only. (A,B..Z)"
+	TokenType = Expression
+	TargetMAK = Yes
+	TargetH = Yes
+	TargetEQU = Yes
+	Range = "0,1,2..9,A,B..Z"
+End
+
+TOKEN
+	Name  = "PROJECT_NAME"
+	Value  = "Experimental Project"
+	TokenType = Expression
+	TargetMAK = Yes
+	TargetH = Yes
+End
+
+TOKEN
+	Name  = "ROM_FILE_NAME"
+	Value = "ExpPro01"
+	TokenType = Expression
+	TargetMAK = Yes
+	TargetH = Yes
+End
+
+TOKEN
+	Name  = "RR"
+	Value  = "0x1"
+	TokenType = Integer
+	TargetMAK = Yes
+	TargetH = Yes
+	TargetEQU = Yes
+	Token = "PHASE_CODE" = "A"
+End
+
+TOKEN
+	Name  = "RR"
+	Value  = "0x0"
+	TokenType = Integer
+	TargetMAK = Yes
+	TargetH = Yes
+	TargetEQU = Yes
+	Token = "PHASE_CODE" = "P"
+End

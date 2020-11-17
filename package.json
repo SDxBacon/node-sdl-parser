@@ -1,0 +1,19 @@
+{
+  "name": "node-sdl-parser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SDxBacon/node-sdl-parser.git",
+  "author": "SDxBacon <z141134553@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+    "build": "tsc index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}
