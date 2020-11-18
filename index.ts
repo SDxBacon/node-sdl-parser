@@ -4,7 +4,9 @@ import parseSDL from "./src/parseSDL";
 /**
  * allocate sdl file path
  */
-const fp = path.join(__dirname, "./data/Oem.sdl");
+const splitDirname: string[] = __dirname.split('node-sdl-parser');
+const isBuilt = splitDirname[1] === '/build'
+const fp = path.join(__dirname, `${isBuilt ? '../': ''}`, "./data/Oem.sdl");
 
 /**
  * execute parseSDL
