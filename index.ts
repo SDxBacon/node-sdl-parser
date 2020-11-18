@@ -1,14 +1,18 @@
 import path from "path";
-import parseSDL from "./src/parseSDL";
+import readFile from "./src/readFile";
+import parse from "./src/parse";
 
 /**
- * allocate sdl file path
+ * locate sdl file path
  */
-const splitDirname: string[] = __dirname.split('node-sdl-parser');
-const isBuilt = splitDirname[1] === '/build'
-const fp = path.join(__dirname, `${isBuilt ? '../': ''}`, "./data/Oem.sdl");
+const fp = path.join(__dirname, "./test/data/Oem.sdl");
 
-/**
- * execute parseSDL
- */
-parseSDL(fp);
+async function run() {
+  /** read file */
+  const data = await readFile(fp);
+
+  /** parse data */
+  parse(data);
+}
+
+run();
