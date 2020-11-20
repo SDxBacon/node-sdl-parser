@@ -4,6 +4,7 @@
 import fs from "fs";
 import path from "path";
 import appendDummy from "./utils/appendDummy";
+import parseByLine from "../src/parse/parseByLine";
 
 const fpTestData = path.join(__dirname, "./data/Oem.sdl");
 const fpTestDataJumbo = path.join(__dirname, "./data/Oem.Jumbo.sdl");
@@ -43,8 +44,21 @@ afterAll((done) => {
  * start_test
  */
 function start_test() {
-  test("Put your test case here", async function () {
-    // Put your test case here
+  const parseByLineCallback = function (sdlData) {
+    const phaseCode = sdlData.get("PHASE_CODE");
+    const majorVersion = sdlData.get("PROJECT_MAJOR_VERSION");
+    const minorVersion = sdlData.get("PROJECT_MINOR_VERSION");
+    expect(phaseCode).toEqual("A");
+    expect(majorVersion).toEqual("0");
+    expect(minorVersion).toEqual("01");
+  };
+
+  test("testing with normal size", function () {
+    return parseByLine(fpTestData).then(parseByLineCallback);
+  });
+
+  test("testing with jumbo size", function () {
+    return parseByLine(fpTestDataJumbo).then(parseByLineCallback);
   });
 }
 
