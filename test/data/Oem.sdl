@@ -1,14 +1,18 @@
 TOKEN
 	Name  = "PHASE_CODE"
-	Value = "A"
+	Value = "A" # 這是註解
 	TokenType = Expression
 	TargetMAK = Yes
 	TargetH = Yes
 	TargetEQU = Yes
 End
 
+##########################################
+#               這是註解區塊	             #
+##########################################
+
 TOKEN
-	Name  = "PROJECT_MAJOR_VERSION"
+	Name  = "PROJECT_MAJOR_VERSION" #### 不管幾個#號開頭，這都是註解
 	Value  = "0"
 	TokenType = Integer
 	TargetMAK = Yes
