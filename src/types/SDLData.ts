@@ -1,7 +1,3 @@
-import produce, { enableMapSet } from "immer";
-
-enableMapSet();
-
 // const BEGIN_STR = "TOKEN";
 const STOP_STR = "End";
 
@@ -27,7 +23,7 @@ class SDLData {
     const key = this._targetKey;
     const value = this._cacheElement;
     if (key && value) {
-      this._map = produce(this._map, (draft) => draft.set(key, value));
+      this._map.set(key, value);
     }
   }
 
