@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const SIZE = 5000;
+const SIZE = 100000;
 
 function createDummy(index: number) {
   return `TOKEN
