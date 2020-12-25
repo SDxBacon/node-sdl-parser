@@ -9,7 +9,7 @@ import { BEGIN_STR, STOP_STR } from "../constants";
  * @param filepath
  */
 function parse(filepath: string): Promise<any> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     /**
      * create read stream & readline interface
      */
@@ -42,7 +42,6 @@ function parse(filepath: string): Promise<any> {
       readStream.destroy();
 
       // sdlData will be resolved
-
       resolve(sdlData);
     });
   });
