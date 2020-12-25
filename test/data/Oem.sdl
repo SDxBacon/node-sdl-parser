@@ -56,22 +56,53 @@ TOKEN
 	TargetH = Yes
 End
 
+##########################################
+# @ Property: Overwrite                  #
+# @ Value: BB                            #
+#	@ Description: testing overwrite       #
+##########################################
 TOKEN
-	Name  = "RR"
-	Value  = "0x1"
-	TokenType = Integer
-	TargetMAK = Yes
-	TargetH = Yes
-	TargetEQU = Yes
+	Name  = "Overwrite"
+	Value  = "AA"
+End
+
+TOKEN
+	Name  = "Overwrite"
+	Value  = "BB"
+End
+
+##########################################
+# @ Property: RR1                        #
+# @ Value: 0x00                          #
+#	@ Description: testing condition       #
+##########################################
+TOKEN
+	Name  = "RR1"
+	Value  = "0x00"
 	Token = "PHASE_CODE" = "A"
 End
 
 TOKEN
-	Name  = "RR"
-	Value  = "0x0"
-	TokenType = Integer
-	TargetMAK = Yes
-	TargetH = Yes
-	TargetEQU = Yes
-	Token = "PHASE_CODE" = "P"
+	Name  = "RR1"
+	Value  = "0x01"
+	Token = "PHASE_CODE" = "B"
+End
+
+##########################################
+# @ Property: RR2                        #
+# @ Value: 0x01                          #
+#	@ Description: testing condition       #
+##########################################
+# this section is truthy, so the RR2 is 0x00
+TOKEN
+	Name  = "RR2"
+	Value  = "0x00"
+	Token = "PHASE_CODE" = "A"
+End
+
+# this section also truthy, hence RR2 will be overwritten into 0x01
+TOKEN
+	Name  = "RR2"
+	Value  = "0x01"
+	Token = "PHASE_CODE" != "B"
 End

@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.dev.ts",
     "build": "tsc",
     "test": "jest --testTimeout=20000"
   },

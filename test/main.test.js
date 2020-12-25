@@ -48,9 +48,16 @@ function start_test() {
     const phaseCode = sdlData.get("PHASE_CODE");
     const majorVersion = sdlData.get("PROJECT_MAJOR_VERSION");
     const minorVersion = sdlData.get("PROJECT_MINOR_VERSION");
+    const Overwrite = sdlData.get("Overwrite");
+    const RR1 = sdlData.get("RR1");
+    const RR2 = sdlData.get("RR2");
+
     expect(phaseCode).toEqual("A");
     expect(majorVersion).toEqual("0");
     expect(minorVersion).toEqual("01");
+    expect(Overwrite).toEqual("BB");
+    expect(RR1).toEqual("0x00");
+    expect(RR2).toEqual("0x01");
   };
 
   test("testing with normal size", function () {
