@@ -1,6 +1,6 @@
 import parseByLine from "./src/parse/parseByLine";
 
-export { parseByLine };
+export { parseByLine as parse };
 
-const nodeSDLParser = { parseByLine };
+const nodeSDLParser = { parse: parseByLine };
 export default nodeSDLParser;
