@@ -6,6 +6,9 @@
   "repository": "https://github.com/SDxBacon/node-sdl-parser.git",
   "author": "SDxBacon <z141134553@gmail.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.dev.ts",
