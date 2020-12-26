@@ -1,6 +1,6 @@
 {
   "name": "node-sdl-parser",
-  "version": "1.0.1-0",
+  "version": "1.0.1-1",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "repository": "https://github.com/SDxBacon/node-sdl-parser.git",
