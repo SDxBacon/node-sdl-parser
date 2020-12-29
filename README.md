@@ -35,6 +35,18 @@ Thats assume we have a SDL file and it contains following contents:
   Name  = "PROJECT_MINOR_VERSION"
   Value = "01"
  End
+ 
+TOKEN
+  Name  = "RR1"
+  Value = "00"
+  Token = "PHASE_CODE" = "L"
+ End
+ 
+TOKEN
+  Name  = "RR1"
+  Value = "01"
+  Token = "PHASE_CODE" = "A"  
+ End
 ```
 
 Then, here is a example:
@@ -52,6 +64,7 @@ const sdlData = sdlParser.parse(fp);
 sdlData.get("PHASE_CODE"); // output: A, type: string
 sdlData.get("PROJECT_MAJOR_VERSION"); // output: 1, type: string
 sdlData.get("PROJECT_MINOR_VERSION"); // output: 01, type: string
+sdlData.get("RR1"); // output: 01, type: string
 ```
 
 # License
